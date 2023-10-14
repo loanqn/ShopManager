@@ -23,7 +23,7 @@
                   <div class="row">
                      <div class="col">
                         <center>
-                           <img width="100px" src="Image/generaluser.png" />
+                            <img width="100px" src="imgs/adm.png" />
                         </center>
                      </div>
                   </div>
