@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ShopManager.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <!--Boostrap css-->
+    <link href="Boostrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--Fontawsome css-->
+    <link href="Fontawesome/css/all.css" rel="stylesheet" />
+    <!--Data Tables css-->
+    <link href="Tabledata/css/cdn.datatables.net_1.13.6_css_jquery.dataTables.min.css" rel="stylesheet" />
+
+    <!--Custom css-->
+    <link href="StyleSheet/MainStyle.css" rel="stylesheet" />
+
+    <!--Jquery-->
+    <script src="Boostrap/js/code.jquery.com_jquery-3.3.1.slim.min.js"></script>
+
+     <!--Boostrap js-->
+    <script src="Boostrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Boostrap/js/dist_js_bootstrap.min.js"></script>
+    <script src="Boostrap/js/dist_umd_popper.min.js"></script>
+
+     <!--Fontawsome js-->
+    <script src="Fontawesome/js/all.js"></script>
+
+     <!--Data Tables js-->
+    <script src="Tabledata/js/cdn.datatables.net_1.13.6_js_jquery.dataTables.min.js"></script>
+
+     <asp:ContentPlaceHolder ID="head" runat="server">
+
+ </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+                        <div>
+                    <nav class="navbar navbar-expand-lg bg-light border-bottom border-body text-white">
+                        <a class="navbar-brand" href="#"><img src="imgs/home.png"< height="30" weight="30"/>W-Shop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   
+            
+        </button>
+
+         <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="HomePage.aspx">Home </a>
+                    </li>
+              <li class="nav-item active">
+    <a class="nav-link " href="#">About Us</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="#">Terms</a>
+  </li>
+</ul>
+               <ul class="navbar-nav text-light">
+  <li class="nav-item active active">
+      <asp:LinkButton ID="LinkButton1" class="nav-link"  runat="server" >
+          View shop
+      </asp:LinkButton>
+  </li>
+  <li class="nav-item active">
+  <asp:LinkButton ID="signUpLink" class="nav-link" runat="server" OnClick="signUpLink_Click" >
+         Sign Up
+      </asp:LinkButton>
+  </li>
+  <li class="nav-item active">
+   <asp:LinkButton ID="logOutLink"  class="nav-link"  runat="server" Visible="False" OnClick="logOutLink_Click" >
+          Logout
+      </asp:LinkButton>
+  </li>
+       <li class="nav-item active">
+   <asp:LinkButton ID="userLink" class="nav-link"  runat="server" OnClick="userLink_Click" >
+         User Login
+      </asp:LinkButton>
+  </li>
+      <li class="nav-item active">
+   <asp:LinkButton ID="HelooUserLink" class="nav-link" runat="server" >
+         Hello User
+      </asp:LinkButton>
+  </li>
+</ul>
+    </div>
+    </nav>
+  </div>
+
+         <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+                <!--Footer-->
+    <footer>
+       <div id="Footer" class ="container-fluid">
+           <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+              <p>
+                            <asp:LinkButton class="footerlinks" ID="adminLogin" runat="server" OnClick="adminLogin_Click" >Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks"  runat="server" >Địa chỉ</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks"  runat="server" >Hotline:0837248673</asp:LinkButton>
+                            &nbsp;
+
+                            <asp:LinkButton class="footerlinks" ID="QlySP"  runat="server" OnClick="QlySP_Click" >Quản Lý Sản Phẩm</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="QlyUser" runat="server" OnClick="QlyUser_Click" >Quản Lý Người Dùng</asp:LinkButton>
+                            &nbsp;
+                                                    
+                </p>
+                   <p>
+                            <a class="footerlinks" href="#" target="_blank">Thứ bạn cần đó là những thứ chúng tôi cần, ở đây chúng tôi có tất cả trừ người bạn yêu</a></p>
+            </div>
+           </div>
+       </div>
+    </footer>
+<!--Footer-->
+    </form>
+</body>
+</html>
